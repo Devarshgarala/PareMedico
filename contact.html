@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Paré Medico – Reach us for hospital textile inquiries, pharmaceutical export discussions, or general questions. A-326 Lilamani Trade Centre, Dudheshwar Road, Ahmedabad - 380004, Gujarat, India." />
+  <title>Contact | Paré Medico</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+
+    /* ── HERO ── */
+    .contact-hero {
+      background: var(--navy);
+      min-height: 50vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 5rem;
+      padding-top: 10rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-hero-pattern {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .contact-hero-pattern svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .contact-hero-content { position: relative; z-index: 2; }
+
+    .contact-hero h1 {
+      color: var(--white);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .contact-hero h1 em { font-style: italic; color: var(--gold); }
+
+    .contact-hero p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.05rem;
+      max-width: 520px;
+    }
+
+    .hero-gold-line {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold-light) 60%, transparent);
+    }
+
+    /* ── MAIN CONTACT SECTION ── */
+    .contact-main {
+      background: var(--cream);
+      padding: 7rem 0;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* ── LEFT PANEL ── */
+    .contact-info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .contact-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: rgba(200,164,90,0.3);
+    }
+
+    .contact-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-card-icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-card-icon svg { color: var(--gold); }
+
+    .contact-card-title {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .contact-detail-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .contact-detail-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .contact-detail-value {
+      font-size: 0.92rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .contact-detail-value a {
+      color: var(--navy);
+      transition: color var(--transition);
+    }
+
+    .contact-detail-value a:hover { color: var(--gold); }
+
+    /* Department emails */
+    .dept-email-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .dept-email {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      background: var(--cream);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .dept-email:hover {
+      border-color: rgba(200,164,90,0.3);
+      background: var(--gold-pale);
+    }
+
+    .dept-email-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+    }
+
+    .dept-email-address {
+      font-size: 0.83rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .dept-email-address a {
+      color: var(--navy);
+      transition: color var(--transition);
+    }
+
+    .dept-email-address a:hover { color: var(--gold); }
+
+    /* ── FORM PANEL ── */
+    .contact-form-panel {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-form-panel::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .form-title {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      margin-bottom: 2.5rem;
+    }
+
+    /* Interest selector */
+    .interest-selector {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .interest-option {
+      position: relative;
+    }
+
+    .interest-option input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .interest-option label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 1rem 0.75rem;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+    }
+
+    .interest-option label .option-emoji {
+      font-size: 1.3rem;
+    }
+
+    .interest-option input:checked + label {
+      border-color: var(--gold);
+      background: rgba(200,164,90,0.06);
+      color: var(--navy);
+    }
+
+    .interest-option label:hover {
+      border-color: rgba(200,164,90,0.4);
+      background: rgba(200,164,90,0.03);
+    }
+
+    /* Submit button full width */
+    .btn-submit {
+      width: 100%;
+      justify-content: center;
+      padding: 1rem 2rem;
+      font-size: 0.85rem;
+    }
+
+    /* Form success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .form-success-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: #E6F4EA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .form-success-icon svg { color: #1B6B30; }
+
+    .form-success h3 {
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .form-success p {
+      color: var(--text-mid);
+      font-size: 0.9rem;
+    }
+
+    /* ── INFO STRIP ── */
+    .info-strip {
+      background: var(--navy);
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-strip::before,
+    .info-strip::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .info-strip::before { top: 0; }
+    .info-strip::after  { bottom: 0; }
+
+    .info-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+
+    .info-strip-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .info-strip-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(200,164,90,0.1);
+      border: 1px solid rgba(200,164,90,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-strip-icon svg { color: var(--gold); }
+
+    .info-strip-item h4 {
+      color: var(--white);
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .info-strip-item p {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.83rem;
+      line-height: 1.65;
+    }
+
+    .info-strip-item a {
+      color: var(--gold);
+      font-weight: 500;
+      font-size: 0.88rem;
+      display: block;
+      margin-top: 0.35rem;
+      transition: color var(--transition);
+    }
+
+    .info-strip-item a:hover { color: var(--gold-light); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .info-strip-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-form-panel { padding: 2rem 1.5rem; }
+      .interest-selector { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Paré Medico Home">
+          <span class="nav-logo-name">Paré Medico</span>
+          <span class="nav-logo-tagline">Healthcare Solutions</span>
+        </a>
+        <ul class="nav-menu" id="nav-menu" role="menubar">
+          <li role="none"><a href="index.html"    class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="about.html"    class="nav-link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="textiles.html" class="nav-link" role="menuitem">Hospital Textiles</a></li>
+          <li role="none"><a href="pharma.html"   class="nav-link" role="menuitem">Pharma &amp; Nutra</a></li>
+          <li role="none"><a href="contact.html"  class="nav-link active" role="menuitem">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="contact-hero">
+    <div class="contact-hero-pattern" aria-hidden="true">
+      <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200"  cy="500" r="350" fill="none" stroke="#C8A45A" stroke-width="0.5" opacity="0.12"/>
+        <circle cx="1400" cy="100" r="250" fill="none" stroke="#C8A45A" stroke-width="0.5" opacity="0.1"/>
+        <line x1="0"    y1="200" x2="500"  y2="500" stroke="#C8A45A" stroke-width="0.4" opacity="0.07"/>
+        <line x1="1440" y1="300" x2="900"  y2="500" stroke="#C8A45A" stroke-width="0.4" opacity="0.07"/>
+        <rect x="0" y="0" width="3"  height="80" fill="#C8A45A" opacity="0.5"/>
+        <rect x="0" y="0" width="80" height="3"  fill="#C8A45A" opacity="0.5"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="contact-hero-content">
+        <div class="section-label animate-up">Reach Out</div>
+        <h1 class="animate-up delay-1">
+          Let's Start a<br><em>Conversation</em>
+        </h1>
+        <p class="animate-up delay-2">
+          Whether you need hospital textiles in bulk or want to explore
+          nutraceutical export opportunities we respond within 48 hours.
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-gold-line" aria-hidden="true"></div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTACT AREA
+  ══════════════════════════════════════ -->
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- LEFT: Info cards -->
+        <div class="contact-info-panel">
+
+          <!-- General contact -->
+          <div class="contact-card reveal">
+            <div class="contact-card-header">
+              <div class="contact-card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"/>
+                </svg>
+              </div>
+              <span class="contact-card-title">Company Details</span>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-row">
+                <span class="contact-detail-label">Company</span>
+                <span class="contact-detail-value">Paré Medico</span>
+              </div>
+              <div class="contact-detail-row">
+                <span class="contact-detail-label">Address</span>
+                <span class="contact-detail-value">
+                  <a href="https://maps.google.com/?q=A-326+Lilamani+Trade+Centre+Dudheshwar+Road+Ahmedabad+380004+Gujarat+India" target="_blank" rel="noopener noreferrer">
+                    A-326 Lilamani Trade Centre, Dudheshwar Road, Ahmedabad - 380004, Gujarat, India
+                  </a>
+                </span>
+              </div>
+              <div class="contact-detail-row">
+                <span class="contact-detail-label">Phone</span>
+                <span class="contact-detail-value">
+                  <a href="tel:+919106505774">+91 9106505774</a>
+                </span>
+              </div>
+              <div class="contact-detail-row">
+                <span class="contact-detail-label">General Email</span>
+                <span class="contact-detail-value">
+                  <a href="mailto:info@paremedico.com">info@paremedico.com</a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Department emails -->
+          <div class="contact-card reveal">
+            <div class="contact-card-header">
+              <div class="contact-card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <span class="contact-card-title">Department Emails</span>
+            </div>
+            <div class="dept-email-list">
+              <div class="dept-email">
+                <span class="dept-email-label">🏥 Textiles</span>
+                <span class="dept-email-address"><a href="mailto:textiles@paremedico.com">textiles@paremedico.com</a></span>
+              </div>
+              <div class="dept-email">
+                <span class="dept-email-label">💊 Pharma Export</span>
+                <span class="dept-email-address"><a href="mailto:exports@paremedico.com">exports@paremedico.com</a></span>
+              </div>
+              <div class="dept-email">
+                <span class="dept-email-label">📩 General</span>
+                <span class="dept-email-address"><a href="mailto:info@paremedico.com">info@paremedico.com</a></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Response time -->
+          <div class="contact-card reveal" style="background: var(--navy); border-color: rgba(200,164,90,0.2);">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+              <span style="font-size:1.5rem;" aria-hidden="true">⏱</span>
+              <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold);">Response Time</span>
+            </div>
+            <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.7; margin:0;">
+              We respond to all inquiries within <strong style="color:var(--gold);">48 business hours</strong>.
+              For urgent textile or export requirements, call us directly.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="contact-form-panel reveal">
+
+          <h2 class="form-title">Send Us a Message</h2>
+          <p class="form-subtitle">Fill in your details and we'll get back to you promptly.</p>
+
+          <!-- Interest selector (visual radio) -->
+          <div class="form-group">
+            <label>Area of Interest</label>
+            <div class="interest-selector" role="group" aria-label="Select your area of interest">
+              <div class="interest-option">
+                <input type="radio" name="interest_visual" id="int-textiles" value="Textiles" checked />
+                <label for="int-textiles">
+                  <span class="option-emoji" aria-hidden="true">🏥</span>
+                  Hospital Textiles
+                </label>
+              </div>
+              <div class="interest-option">
+                <input type="radio" name="interest_visual" id="int-pharma" value="Pharma & Nutra" />
+                <label for="int-pharma">
+                  <span class="option-emoji" aria-hidden="true">💊</span>
+                  Pharma &amp; Nutra
+                </label>
+              </div>
+              <div class="interest-option">
+                <input type="radio" name="interest_visual" id="int-both" value="Both" />
+                <label for="int-both">
+                  <span class="option-emoji" aria-hidden="true">🤝</span>
+                  Both
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" novalidate aria-label="Contact form">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span aria-hidden="true" style="color:var(--gold);">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Your company or hospital"
+                  autocomplete="organization"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true" style="color:var(--gold);">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@company.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+91 or international"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span aria-hidden="true" style="color:var(--gold);">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about your requirements quantities, product types, timeline, or any questions..."
+                required
+                aria-required="true"
+                rows="5"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              Send Message
+            </button>
+
+          </form>
+
+          <!-- Success state (shown after submit) -->
+          <div class="form-success" id="form-success" role="alert" aria-live="polite">
+            <div class="form-success-icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. We'll get back to you within 48 business hours.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       INFO STRIP
+  ══════════════════════════════════════ -->
+  <section class="info-strip" aria-label="Quick contact information">
+    <div class="container">
+      <div class="info-strip-grid">
+
+        <div class="info-strip-item reveal">
+          <div class="info-strip-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Hospital Textiles Inquiries</h4>
+            <p>Bulk orders, custom branding, pricing &amp; product specifications.</p>
+            <a href="mailto:textiles@paremedico.com">textiles@paremedico.com</a>
+          </div>
+        </div>
+
+        <div class="info-strip-item reveal">
+          <div class="info-strip-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2"  y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Export &amp; Pharma Inquiries</h4>
+            <p>Product sourcing, export documentation &amp; international trade.</p>
+            <a href="mailto:exports@paremedico.com">exports@paremedico.com</a>
+          </div>
+        </div>
+
+        <div class="info-strip-item reveal">
+          <div class="info-strip-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Our Location</h4>
+            <p>A-326 Lilamani Trade Centre, Dudheshwar Road, Ahmedabad - 380004, Gujarat, India.</p>
+            <a href="tel:+919106505774">+91 9106505774</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-brand-name">Paré Medico</div>
+          <div class="footer-brand-tagline">Healthcare Solutions</div>
+          <p class="footer-desc">
+            Gujarat-based healthcare company supplying hospital textiles and
+            exporting pharmaceutical &amp; nutraceutical products globally.
+          </p>
+          <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <span class="footer-badge">Licensed &amp; Certified</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="textiles.html">Hospital Textiles</a></li>
+            <li><a href="pharma.html">Pharma &amp; Nutra</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <a href="https://www.google.com/maps/place/Lilamani+Trade+center,+Tavdipura,+Kazipur+Dariyapur,+Ahmedabad,+Gujarat+380004/@23.039921,72.5853609,17z/data=!3m1!4b1!4m6!3m5!1s0x395e84420484d7a9:0xc812064b819b6687!8m2!3d23.0398577!4d72.5852702!16s%2Fg%2F11bvtfpy_r!18m1!1e1?entry=ttu"target="_blank"rel="noopener noreferrer"style="color:rgba(255,255,255,0.55);transition:color 0.3s;">A-326 Lilamani Trade Centre, Dudheshwar Road, Ahmedabad - 380004, Gujarat, India</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <a href="tel:+919106505774" style="color:rgba(255,255,255,0.55);transition:color 0.3s;">+91 9106505774</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:info@paremedico.com" style="color:rgba(255,255,255,0.55);transition:color 0.3s;">info@paremedico.com</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Paré Medico. All Rights Reserved.</span>
+        <div class="footer-badges">
+          <span>Textiles: <a href="mailto:textiles@paremedico.com" style="color:rgba(200,164,90,0.6);">textiles@paremedico.com</a></span>
+          <span>Exports: <a href="mailto:exports@paremedico.com" style="color:rgba(200,164,90,0.6);">exports@paremedico.com</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
